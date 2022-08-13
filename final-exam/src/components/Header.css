@@ -1,0 +1,25 @@
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  align-items: center;
+  background-color: black;
+}
+.home-headerLeft {
+  display: flex;
+  align-items: center;
+}
+.home-headerLeft > p {
+  margin-right: 20px;
+}
+.home-headerRight {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  justify-content: space-evenly;
+}
+.home-search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,56 @@
+.showlist {
+  display: flex;
+  justify-content: column;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.showlist > button {
+  color: white;
+  font-size: 2rem;
+  height: 120px;
+  width: 40px;
+  background-color: transparent;
+  border: 1px solid blue;
+  /* margin-top: 80px; */
+}
+
+.shows {
+  height: 120px;
+  width: 92vw;
+  display: flex;
+  overflow-y: scroll;
+  margin: 0px 40px;
+  justify-content: space-around;
+
+  /* margin-top: 85px; */
+}
+
+.show {
+  height: 100%;
+  width: 230px;
+  border-radius: 2px;
+  padding: 0px 12px;
+  margin-right: 50px;
+}
+
+.show img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+
+  border-radius: 20px;
+}

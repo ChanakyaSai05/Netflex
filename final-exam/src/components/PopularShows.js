@@ -5,6 +5,7 @@ import { selectUser } from "../features/userSlice.js";
 import "./PopularShows.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 function PopularShows() {
+  const [color, setColor] = useState("transparent");
   const ref = useRef(null);
   const user = useSelector(selectUser);
   const scroll = (scrollOffset) => {
@@ -13,10 +14,16 @@ function PopularShows() {
   const filtered = data?.shows?.filter((item) =>
     item.title.toLowerCase().includes(user.toLowerCase())
   );
+  useEffect(() => {
+    if (user.length > 0) {
+      setColor("black");
+    } else {
+      setColor("transparent");
+    }
+  }, [user]);
   return (
     <>
-      <h2 style={{ color: "white", marginLeft: "40px" }}>Popular on NetFlix</h2>
-      <div className="showlist">
+      <div className="showlist" style={{ backgroundColor: color }}>
         <div className="shows" ref={ref}>
           {filtered?.map((show) => {
             return (
@@ -30,7 +37,7 @@ function PopularShows() {
         <div onClick={() => scroll(100)}>
           <ArrowForwardIosIcon
             style={{
-              color: "white",
+              color: "darkgrey",
               paddingTop: "35px",
               marginRight: "30px",
               height: "45px",

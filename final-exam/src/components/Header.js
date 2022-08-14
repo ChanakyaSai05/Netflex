@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../assets/images/logo.png";
 import "./Header.css";
 import { useDispatch } from "react-redux";
 import SearchIcon from "@mui/icons-material/Search";
 import { set_data } from "../features/userSlice";
-function Navbar({ setFiltered }) {
-  // const [input, setInput] = useState("");
+function Navbar() {
   const dispatch = useDispatch();
 
   return (
@@ -34,7 +33,7 @@ function Navbar({ setFiltered }) {
         <img
           className="user-img"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuIbv-7JSgC23hcGq8qDRBpFzdMBEw8urHdQ&usqp=CAU"
-          alt="user image"
+          alt="user pic"
           width="50"
           height="50"
         />
